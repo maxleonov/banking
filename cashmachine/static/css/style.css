@@ -1,0 +1,16 @@
+body {
+    padding-top: 70px;
+}
+
+.tooltip-inner {
+    white-space:pre-wrap;
+}
+
+.container img {
+    margin: 0px auto;
+    display:block";
+}
+
+.container p {
+    text-align:center;
+}

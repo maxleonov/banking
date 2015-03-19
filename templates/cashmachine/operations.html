@@ -1,0 +1,21 @@
+{% extends "cashmachine/base.html" %}
+
+{% block navigation %}
+    {% include "cashmachine/nav_logout.html" %}
+{% endblock %}
+
+{% block content %}
+    <table class="table table-bordered" align="center" style="width:30%;">
+            <tr>
+                <td>
+                    <a href="/operations/balance/">View balance</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/operations/getcash/">Get cash</a>
+                </td>
+            </tr>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "cashmachine/base.html" %}
+
+{% block navigation %}
+    {% include "cashmachine/nav_back.html" %}
+{% endblock %}
+
+{% block content %}
+    {% if error %}
+        <div class="alert alert-danger text-center" role="alert">{{ error }}</div>
+    {% endif %}
+{% endblock %}

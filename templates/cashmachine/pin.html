@@ -1,0 +1,30 @@
+{% extends "cashmachine/base.html" %}
+
+{% load staticfiles %}
+
+{% block navigation %}
+    {% include "cashmachine/nav_logout.html" %}
+{% endblock %}
+
+{% block content %}
+    <script src="{% static 'js/numpad.js' %}"></script>
+    <script>
+        NUMPAD_INPUT_ID = "id_pin"
+        NUMPAD_INPUT_MAX_LEN = 4;
+    </script>
+
+    <form class="form-horizontal" action="/pin/" method="post">
+        {% csrf_token %}
+        <table class="table table-condensed" align="center" style="width:30%;">
+            <tr>
+                <td>
+                    {{ form.as_p }}
+                </td>
+                <td style="text-align:center;" colspan="2">
+                    <input type="submit" value="OK" class="btn btn-default" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    {% include "cashmachine/numpad.html" %}
+{% endblock %}

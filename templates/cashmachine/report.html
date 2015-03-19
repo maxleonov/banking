@@ -1,0 +1,31 @@
+{% extends "cashmachine/base.html" %}
+
+{% block navigation %}
+    {% include "cashmachine/nav_back.html" %}
+    {% include "cashmachine/nav_logout.html" %}
+{% endblock %}
+
+{% block content %}
+    <table class="table table-bordered" align="center" style="width:40%;">
+        <tr>
+            <td>Card ID</td>
+            <td>{{ log_record.card_id }}</td>
+        </tr>
+        <tr>
+            <td>Operation</td>
+            <td>{{ log_record.operation.name }}</td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td>{{ log_record.amount }}</td>
+        </tr>
+        <tr>
+            <td>Balance after operation</td>
+            <td>{{ log_record.balance_after_operation }}</td>
+        </tr>
+        <tr>
+            <td>Date/Time</td>
+            <td>{{ log_record.created_at|date:"DATETIME_FORMAT" }}</td>
+        </tr>
+    </table>
+{% endblock %}
